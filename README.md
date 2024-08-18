@@ -3,7 +3,7 @@
 
 ## Live Site
 
-You can view the live version of the application at: (https://chatbot-doj.streamlit.app/)/)
+You can view the live version of the application at: (https://chatbot-doj.streamlit.app/)
 
 ## App Functionality
 
