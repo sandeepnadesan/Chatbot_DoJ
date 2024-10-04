@@ -30,7 +30,7 @@ serpapi_api_key = os.getenv("SERPAPI_API_KEY")
 
 # List of URLs to load
 urls = [
-    "https://doj.gov.in/"
+    "https://www.maplelabs.com/performance-engineering.html"
 ]
 
 @st.cache_data
@@ -184,7 +184,7 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
 
 # React to user input
-if prompt := st.chat_input("Ask a question about the DoJ:"):
+if prompt := st.chat_input("Ask a question about the secretary:"):
     st.chat_message("user").markdown(prompt)
     st.session_state.messages.append({"role": "user", "content": prompt})
 
@@ -208,9 +208,9 @@ if prompt := st.chat_input("Ask a question about the DoJ:"):
                 
                 if qa_answer.lower() ==  qa_answer:
                     # Fallback to SerpApi answers if QA chain answer is "I don't know"
-                    answer = f"{serpapi_answers}"
+                    answer = f"Seri answer: {serpapi_answers}"
                 else:
-                    answer = f"{serpapi_answers}"
+                    answer = f"Seri answers: {serpapi_answers}"
             else:
                 answer = f"QA Chain answer: {qa_answer}"
 
